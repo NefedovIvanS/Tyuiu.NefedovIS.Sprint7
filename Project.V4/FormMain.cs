@@ -26,7 +26,12 @@ namespace Project.V4
                 dataGridView_NIS.Columns.Add($"Column{col}", matrix[0, col]);
             }
 
-            dataGridView_NIS.Columns[0].Width = 100;
+            dataGridView_NIS.Columns[0].Width = 175;
+            dataGridView_NIS.Columns[1].Width = 300;
+            dataGridView_NIS.Columns[2].Width = 60;
+            dataGridView_NIS.Columns[3].Width = 150;
+            dataGridView_NIS.Columns[5].Width = 50;
+
 
             // Добавление строк данных (начиная со второй строки, так как первая - заголовки)
             for (int row = 1; row < matrix.GetLength(0); row++)
