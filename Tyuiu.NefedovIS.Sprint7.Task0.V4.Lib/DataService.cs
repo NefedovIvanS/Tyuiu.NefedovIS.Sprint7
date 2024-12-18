@@ -13,7 +13,7 @@ namespace Tyuiu.NefedovIS.Sprint7.Task0.V4.Lib
             int columns = lines[0].Split(';').Length; // Предполагаем, что разделитель - ";"
 
             // Создаем двумерный массив
-            string[,] matrix = new string[rows, columns];
+            string[,] matrix = new string[rows, columns]; //Аооаоа)))
 
 
             // Заполняем матрицу
