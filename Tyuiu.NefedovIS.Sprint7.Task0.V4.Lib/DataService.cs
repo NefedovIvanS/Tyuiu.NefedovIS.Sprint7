@@ -8,15 +8,11 @@ namespace Tyuiu.NefedovIS.Sprint7.Task0.V4.Lib
         {
             string[] lines = File.ReadAllLines(path);
 
-            // Определяем размеры матрицы
             int rows = lines.Length;
-            int columns = lines[0].Split(';').Length; // Предполагаем, что разделитель - ";"
+            int columns = lines[0].Split(';').Length;
 
-            // Создаем двумерный массив
             string[,] matrix = new string[rows, columns]; //Аооаоа)))
 
-
-            // Заполняем матрицу
             for (int i = 0; i < rows; i++)
             {
                 string[] values = lines[i].Split(";");
