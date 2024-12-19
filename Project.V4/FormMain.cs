@@ -14,7 +14,7 @@ namespace Project.V4
 
         private void FormMain_Load(object sender, EventArgs e)
         {
-            
+
         }
 
         private void buttonRefreshCSV_NIS_Click(object sender, EventArgs e)
@@ -113,7 +113,7 @@ namespace Project.V4
                         Anchor = AnchorStyles.None
                     };
                     tableLayoutPanel_NIS.Controls.Add(BookAuthor, 1, 0);
-                    
+
                     Label BookYear = new Label
                     {
                         Text = year,
@@ -163,6 +163,42 @@ namespace Project.V4
             if (!BookFound)
             {
                 MessageBox.Show("Книга не найдена. Пожалуйста, проверьте соответсвие введёного артикула.", "Книга не найдена", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void toolTip1_Popup(object sender, PopupEventArgs e)
+        {
+
+        }
+
+        private void buttonTextToPickAndViceVersa_NIS_Click(object sender, EventArgs e)
+        {
+            if (buttonAbout_NIS.Image == null)
+            {
+                buttonTextToPickAndViceVersa_NIS.Image = Properties.Resources.report_go;
+                buttonRefreshCSV_NIS.Image = Properties.Resources.table_refresh;
+                buttonRefreshCSV_NIS.Text = null;
+                buttonFindBook_NIS.Image = Properties.Resources.book_link;
+                buttonFindBook_NIS.Text = null;
+                buttonProfile_NIS.Image = Properties.Resources.vcard;
+                buttonProfile_NIS.Text = null;
+                buttonAbout_NIS.Image = Properties.Resources.help;
+                buttonAbout_NIS.Text = null;
+
+                return;
+            }
+            else
+            {
+                buttonTextToPickAndViceVersa_NIS.Image = Properties.Resources.picture_go;
+                buttonRefreshCSV_NIS.Image = null;
+                buttonRefreshCSV_NIS.Text = "Обновить";
+                buttonFindBook_NIS.Image = null;
+                buttonFindBook_NIS.Text = "Найти книгу";
+                buttonProfile_NIS.Image = null;
+                buttonProfile_NIS.Text = "Личный кабинет";
+                buttonAbout_NIS.Image = null;
+                buttonAbout_NIS.Text = "О приложении";
+                return;
             }
         }
     }
