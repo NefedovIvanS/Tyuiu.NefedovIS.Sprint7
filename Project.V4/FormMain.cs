@@ -201,5 +201,33 @@ namespace Project.V4
                 return;
             }
         }
+
+        private FormAbout formAbout;
+        private void buttonAbout_NIS_Click(object sender, EventArgs e)
+        {
+            if (formAbout == null || formAbout.IsDisposed)
+            {
+                formAbout = new FormAbout();
+                formAbout.Show();
+            }
+            else
+            {
+                formAbout.BringToFront();
+            }
+        }
+
+        private FormProfile formProfile;
+        private void buttonProfile_NIS_Click(object sender, EventArgs e)
+        {
+            if (formProfile == null || formProfile.IsDisposed)
+            {
+                formProfile = new FormProfile();
+                formProfile.Show();
+            }
+            else
+            {
+                formProfile.BringToFront();
+            }
+        }
     }
 }

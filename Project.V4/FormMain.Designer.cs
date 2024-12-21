@@ -111,6 +111,7 @@
             buttonProfile_NIS.Text = "Личный кабинет";
             toolTip_NIS.SetToolTip(buttonProfile_NIS, "Открыть окно личного кабинета");
             buttonProfile_NIS.UseVisualStyleBackColor = true;
+            buttonProfile_NIS.Click += buttonProfile_NIS_Click;
             // 
             // buttonAbout_NIS
             // 
@@ -123,6 +124,7 @@
             buttonAbout_NIS.Text = "О приложении";
             toolTip_NIS.SetToolTip(buttonAbout_NIS, "О приложении");
             buttonAbout_NIS.UseVisualStyleBackColor = true;
+            buttonAbout_NIS.Click += buttonAbout_NIS_Click;
             // 
             // labelArticul_NIS
             // 
