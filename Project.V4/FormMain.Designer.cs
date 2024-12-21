@@ -56,6 +56,7 @@
             dataGridView_NIS.Location = new Point(0, 68);
             dataGridView_NIS.Name = "dataGridView_NIS";
             dataGridView_NIS.ReadOnly = true;
+            dataGridView_NIS.RowHeadersVisible = false;
             dataGridView_NIS.Size = new Size(810, 541);
             dataGridView_NIS.TabIndex = 2;
             // 
