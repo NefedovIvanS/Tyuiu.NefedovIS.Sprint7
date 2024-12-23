@@ -31,6 +31,7 @@
             tableLayoutPanelProfile_NIS = new TableLayoutPanel();
             labelProfile_NIS = new Label();
             splitContainerUpper_NIS = new SplitContainer();
+            labelReaderNumTech_NIS = new Label();
             buttonSearchDeleteHelp_NIS = new Button();
             buttonDeleteReview_NIS = new Button();
             buttonConfirmReview_NIS = new Button();
@@ -96,6 +97,7 @@
             // 
             // splitContainerUpper_NIS.Panel1
             // 
+            splitContainerUpper_NIS.Panel1.Controls.Add(labelReaderNumTech_NIS);
             splitContainerUpper_NIS.Panel1.Controls.Add(tableLayoutPanelProfile_NIS);
             splitContainerUpper_NIS.Panel1.Controls.Add(labelProfile_NIS);
             // 
@@ -121,6 +123,16 @@
             splitContainerUpper_NIS.SplitterDistance = 258;
             splitContainerUpper_NIS.TabIndex = 2;
             // 
+            // labelReaderNumTech_NIS
+            // 
+            labelReaderNumTech_NIS.AutoSize = true;
+            labelReaderNumTech_NIS.Location = new Point(-1, 0);
+            labelReaderNumTech_NIS.Name = "labelReaderNumTech_NIS";
+            labelReaderNumTech_NIS.Size = new Size(20, 15);
+            labelReaderNumTech_NIS.TabIndex = 4;
+            labelReaderNumTech_NIS.Text = "№";
+            labelReaderNumTech_NIS.Visible = false;
+            // 
             // buttonSearchDeleteHelp_NIS
             // 
             buttonSearchDeleteHelp_NIS.Location = new Point(77, 116);
@@ -129,6 +141,7 @@
             buttonSearchDeleteHelp_NIS.TabIndex = 15;
             buttonSearchDeleteHelp_NIS.Text = "?";
             buttonSearchDeleteHelp_NIS.UseVisualStyleBackColor = true;
+            buttonSearchDeleteHelp_NIS.Click += buttonSearchDeleteHelp_NIS_Click;
             // 
             // buttonDeleteReview_NIS
             // 
@@ -138,6 +151,7 @@
             buttonDeleteReview_NIS.TabIndex = 14;
             buttonDeleteReview_NIS.Text = "Удалить";
             buttonDeleteReview_NIS.UseVisualStyleBackColor = true;
+            buttonDeleteReview_NIS.Click += buttonDeleteReview_NIS_Click;
             // 
             // buttonConfirmReview_NIS
             // 
@@ -218,6 +232,7 @@
             buttonReviewNumberFind_NIS.TabIndex = 5;
             buttonReviewNumberFind_NIS.Text = "Поиск отзыва по номеру";
             buttonReviewNumberFind_NIS.UseVisualStyleBackColor = true;
+            buttonReviewNumberFind_NIS.Click += buttonReviewNumberFind_NIS_Click;
             // 
             // textBoxReviewNumber_NIS
             // 
@@ -346,7 +361,7 @@
         private Button buttonRoundGradesDiagram_NIS;
         private Label label1;
         private TextBox textBoxReview_NIS;
-        private TextBox textBoxReviewNumber_NIS;
+        public TextBox textBoxReviewNumber_NIS;
         private TextBox textBoxBookName_NIS;
         private Label labelBookName_NIS;
         private Button buttonConfirmReview_NIS;
@@ -358,5 +373,6 @@
         private Button buttonDeleteReview_NIS;
         private Button buttonReviewNumberFind_NIS;
         private Button buttonSearchDeleteHelp_NIS;
+        public Label labelReaderNumTech_NIS;
     }
 }

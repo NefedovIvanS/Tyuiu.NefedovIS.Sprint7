@@ -28,19 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAbout));
             richTextBox_NIS = new RichTextBox();
             richTextDeveloper_NIS = new RichTextBox();
             SuspendLayout();
             // 
             // richTextBox_NIS
             // 
-            richTextBox_NIS.BorderStyle = BorderStyle.FixedSingle;
+            richTextBox_NIS.BorderStyle = BorderStyle.None;
             richTextBox_NIS.Location = new Point(12, 12);
             richTextBox_NIS.Name = "richTextBox_NIS";
             richTextBox_NIS.ReadOnly = true;
             richTextBox_NIS.Size = new Size(357, 215);
             richTextBox_NIS.TabIndex = 0;
-            richTextBox_NIS.Text = "Desktop приложение на основе Windows Forms — библиотека с каталогом книг и личным профилем. Каталог формируется из .csv файла. Поиск книг ведётся по артикулу. ";
+            richTextBox_NIS.Text = resources.GetString("richTextBox_NIS.Text");
+            richTextBox_NIS.TextChanged += richTextBox_NIS_TextChanged;
             // 
             // richTextDeveloper_NIS
             // 

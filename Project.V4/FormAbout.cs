@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace Project.V4
 {
-    public partial class FormAbout: Form
+    public partial class FormAbout : Form
     {
         public FormAbout()
         {
             InitializeComponent();
+        }
+
+        private void richTextBox_NIS_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

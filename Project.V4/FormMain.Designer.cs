@@ -188,7 +188,7 @@
             Controls.Add(panelButtons_NIS);
             MinimumSize = new Size(1128, 612);
             Name = "FormMain";
-            Text = "Я РАЗЪЕБУ ВЕСЬ МИР И РАЗЪЕБУСЬ ВМЕСТЕ С НИМ";
+            Text = "Библиотека 144-тысячи";
             Load += FormMain_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView_NIS).EndInit();
             panelButtons_NIS.ResumeLayout(false);

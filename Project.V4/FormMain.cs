@@ -202,7 +202,7 @@ namespace Project.V4
             }
         }
 
-        private FormAbout formAbout;
+        FormAbout formAbout = new FormAbout();
         private void buttonAbout_NIS_Click(object sender, EventArgs e)
         {
             if (formAbout == null || formAbout.IsDisposed)
