@@ -64,6 +64,7 @@
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Name = "FormAbout";
             Text = "О приложении";
+            Load += FormAbout_Load;
             ResumeLayout(false);
         }
 

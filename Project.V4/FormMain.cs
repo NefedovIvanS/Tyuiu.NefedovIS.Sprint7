@@ -1,15 +1,23 @@
 using Tyuiu.NefedovIS.Sprint7.Task0.V4.Lib;
+using static Project.V4.FormProfile;
 
 namespace Project.V4
 {
+    public static class GlobalVariables
+    {
+        // Статическая переменная
+        public static string ReaderNumber { get; set; }
+    }
     public partial class FormMain : Form
     {
         DataService ds = new DataService();
         public string path;
         public string[,] matrix;
+        
         public FormMain()
         {
             InitializeComponent();
+            GlobalVariables.ReaderNumber = "100001";
         }
 
         private void FormMain_Load(object sender, EventArgs e)
@@ -21,7 +29,7 @@ namespace Project.V4
         {
             dataGridView_NIS.Rows.Clear();
             dataGridView_NIS.Columns.Clear();
-            string path = @"C:\Users\cumsh\source\repos\Tyuiu.NefedovIS.Sprint7\Books.csv";
+            string path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Books.csv");
             string[,] matrix = ds.CsvToMatrix(path);
             for (int col = 0; col <= 5; col++)
             {
@@ -59,7 +67,7 @@ namespace Project.V4
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string path = @"C:\Users\cumsh\source\repos\Tyuiu.NefedovIS.Sprint7\Books.csv";
+            string path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Books.csv");
             string[,] matrix = ds.CsvToMatrix(path);
             string input = textBoxArticul_NIS.Text;
             //Проверка на введение артикула
@@ -202,7 +210,7 @@ namespace Project.V4
             }
         }
 
-        FormAbout formAbout = new FormAbout();
+        private FormAbout formAbout;
         private void buttonAbout_NIS_Click(object sender, EventArgs e)
         {
             if (formAbout == null || formAbout.IsDisposed)

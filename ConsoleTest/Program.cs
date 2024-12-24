@@ -7,10 +7,11 @@ namespace ConsoleTest
         static void Main(string[] args)
         {
             DataService ds = new DataService();
-            string path = @$"C:\Users\cumsh\source\repos\Tyuiu.NefedovIS.Sprint7\Profiles\100001\reviews.csv";
+            string readerNumber = "100001";
+            string path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Profiles", readerNumber, "reviews.csv");
             string[,] matrix = ds.CsvToMatrix(path);
 
-            // Вывод матрицы
+            //Вывод матрицы
             for (int i = 0; i < matrix.GetLength(0); i++)
             {
                 for (int j = 0; j < matrix.GetLength(1); j++)
@@ -19,6 +20,7 @@ namespace ConsoleTest
                 }
                 Console.WriteLine();
             }
+
         }
     }
 }

@@ -87,6 +87,7 @@
             labelProfile_NIS.Size = new Size(145, 15);
             labelProfile_NIS.TabIndex = 1;
             labelProfile_NIS.Text = "Читательские данные";
+            labelProfile_NIS.Click += labelProfile_NIS_Click;
             // 
             // splitContainerUpper_NIS
             // 
@@ -267,6 +268,7 @@
             buttonTimeDiagram_NIS.TabIndex = 1;
             buttonTimeDiagram_NIS.Text = "Время чтения";
             buttonTimeDiagram_NIS.UseVisualStyleBackColor = true;
+            buttonTimeDiagram_NIS.Click += buttonTimeDiagram_NIS_Click;
             // 
             // buttonRoundGradesDiagram_NIS
             // 
@@ -276,6 +278,7 @@
             buttonRoundGradesDiagram_NIS.TabIndex = 0;
             buttonRoundGradesDiagram_NIS.Text = "Ваши оценки";
             buttonRoundGradesDiagram_NIS.UseVisualStyleBackColor = true;
+            buttonRoundGradesDiagram_NIS.Click += buttonRoundGradesDiagram_NIS_Click;
             // 
             // splitContainerLower_NIS
             // 
@@ -372,7 +375,7 @@
         private TextBox textBoxReadTime_NIS;
         private Button buttonDeleteReview_NIS;
         private Button buttonReviewNumberFind_NIS;
-        private Button buttonSearchDeleteHelp_NIS;
         public Label labelReaderNumTech_NIS;
+        private Button buttonSearchDeleteHelp_NIS;
     }
 }

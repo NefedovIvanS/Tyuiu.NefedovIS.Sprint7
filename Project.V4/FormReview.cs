@@ -28,7 +28,7 @@ namespace Project.V4
             {
                 string value = profile.textBoxReviewNumber_NIS.Text;
                 string readerNumber = profile.labelReaderNumTech_NIS.Text;
-                string path = @$"C:\Users\cumsh\source\repos\Tyuiu.NefedovIS.Sprint7\Profiles\{readerNumber}\reviews.csv";
+                string path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Profiles", readerNumber, "reviews.csv"); ;
                 string[,] reviews_matrix = ds.CsvToMatrix(path);
                 string bookName = "-";
                 string reviewText = "Отзыв не был найден. Пожалуйста, проверьте индекс отзыва.";

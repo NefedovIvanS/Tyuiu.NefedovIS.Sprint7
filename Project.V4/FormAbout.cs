@@ -21,5 +21,10 @@ namespace Project.V4
         {
 
         }
+
+        private void FormAbout_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

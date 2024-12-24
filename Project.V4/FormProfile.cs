@@ -15,6 +15,7 @@ namespace Project.V4
 {
     public partial class FormProfile : Form
     {
+
         public FormProfile()
         {
             InitializeComponent();
@@ -27,10 +28,10 @@ namespace Project.V4
             dataGridViewBooksToSdat_NIS.Columns.Clear();
             dataGridViewReviews_NIS.Rows.Clear();
             dataGridViewReviews_NIS.Columns.Clear();
-            string num = "100001";
-            string profile_path = @$"C:\Users\cumsh\source\repos\Tyuiu.NefedovIS.Sprint7\Profiles\{num}\profile_data.csv";
+            string num = GlobalVariables.ReaderNumber;
+            string profile_path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Profiles", num, "profile_data.csv");
             string[,] profile_data_matrix = ds.CsvToMatrix(profile_path);
-            string books_path = @$"C:\Users\cumsh\source\repos\Tyuiu.NefedovIS.Sprint7\Profiles\{num}\books_history.csv";
+            string books_path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Profiles", num, "books_history.csv");
             string[,] books_history_matrix = ds.CsvToMatrix(books_path);
             string number = profile_data_matrix[1, 0];
             string name = profile_data_matrix[1, 1];
@@ -87,7 +88,7 @@ namespace Project.V4
             };
             tableLayoutPanelProfile_NIS.Controls.Add(Phone, 2, 0);
             //Обзоры
-            string reviews_path = @$"C:\Users\cumsh\source\repos\Tyuiu.NefedovIS.Sprint7\Profiles\{num}\reviews.csv";
+            string reviews_path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Profiles", num, "reviews.csv");
             string[,] reviews_matrix = ds.CsvToMatrix(reviews_path);
             if (reviews_matrix.GetLength(0) != 1)
             {
@@ -113,8 +114,8 @@ namespace Project.V4
         private void buttonConfirmReview_NIS_Click(object sender, EventArgs e)
         {
             DataService ds = new DataService();
-            string num = "100001";
-            string path = @$"C:\Users\cumsh\source\repos\Tyuiu.NefedovIS.Sprint7\Profiles\{num}\reviews.csv";
+            string num = GlobalVariables.ReaderNumber;
+            string path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Profiles", num, "reviews.csv");
             string[,] reviews_matrix = ds.CsvToMatrix(path);
             string bookName = textBoxBookName_NIS.Text;
             string readTime = textBoxReadTime_NIS.Text;
@@ -201,7 +202,7 @@ namespace Project.V4
         {
             DataService ds = new DataService();
             string readerNumber = labelReaderNumTech_NIS.Text;
-            string path = @$"C:\Users\cumsh\source\repos\Tyuiu.NefedovIS.Sprint7\Profiles\{readerNumber}\reviews.csv";
+            string path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Profiles", readerNumber, "reviews.csv");
             string[,] reviews_matrix = ds.CsvToMatrix(path);
             string value = textBoxReviewNumber_NIS.Text;
             if (!string.IsNullOrEmpty(value))
@@ -297,6 +298,38 @@ namespace Project.V4
             else
             {
                 formAbout.BringToFront();
+            }
+        }
+
+        private void labelProfile_NIS_Click(object sender, EventArgs e)
+        {
+
+        }
+        private FormGradeDiagram_NIS formGradeDiagram;
+        private void buttonRoundGradesDiagram_NIS_Click(object sender, EventArgs e)
+        {
+            if (formGradeDiagram == null || formGradeDiagram.IsDisposed)
+            {
+                formGradeDiagram = new FormGradeDiagram_NIS();
+                formGradeDiagram.Show();
+            }
+            else
+            {
+                formGradeDiagram.BringToFront();
+            }
+
+        }
+        private FormHoursDiagram_NIS formHoursDiagram;
+        private void buttonTimeDiagram_NIS_Click(object sender, EventArgs e)
+        {
+            if (formHoursDiagram == null || formHoursDiagram.IsDisposed)
+            {
+                formHoursDiagram = new FormHoursDiagram_NIS();
+                formHoursDiagram.Show();
+            }
+            else
+            {
+                formHoursDiagram.BringToFront();
             }
         }
     }
