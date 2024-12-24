@@ -176,7 +176,7 @@
             // 
             // toolTip_NIS
             // 
-            toolTip_NIS.Popup += toolTip1_Popup;
+            toolTip_NIS.Popup += toolTip1_Popup; //It's over
             // 
             // FormMain
             // 
